@@ -37,11 +37,11 @@ module tb_input_options_ALU;
 //////////////////////////////////////////////////////////////////////////////////    
     #5
     switches = 15;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 20;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100000; //ADD
@@ -51,11 +51,11 @@ module tb_input_options_ALU;
     
     #5
     switches = 20;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 15;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100010; //SUB
@@ -65,11 +65,11 @@ module tb_input_options_ALU;
  
     #5
     switches = 15;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 20;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100100; //AND
@@ -79,11 +79,11 @@ module tb_input_options_ALU;
     
     #5
     switches = 20;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 15;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100101; //OR
@@ -93,11 +93,11 @@ module tb_input_options_ALU;
 
     #5
     switches = 15;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 20;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100110; //XOR
@@ -107,11 +107,11 @@ module tb_input_options_ALU;
     
     #5
     switches = 20;
-    buttons = 6'b100; //A
+    buttons = 3'b100; //A
     
     #5
     switches = 15;
-    buttons = 6'b010; //B
+    buttons = 3'b010; //B
     
     #5
     switches = 6'b100111; //NOR

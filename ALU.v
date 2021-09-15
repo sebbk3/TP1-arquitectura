@@ -34,7 +34,7 @@ module ALU
     reg [N_BITS - 1 : 0] auxLEDS; 
 
     always @(posedge clock) begin
-        auxLEDS=0;
+        //auxLEDS = 0;
         case(Op) 
         6'b100000: //ADD
             auxLEDS <= (Data_A + Data_B);
