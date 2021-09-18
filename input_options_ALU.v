@@ -39,11 +39,11 @@ module input_options_ALU
     always @(posedge clock) begin
         case(buttons) 
         3'b100:
-            Data_A <= switches;
+            Data_A = switches;
         3'b010:
-            Data_B <= switches;
+            Data_B = switches;
         3'b001:
-            Op <= switches;
+            Op = switches;
         endcase          
     end
 
@@ -51,7 +51,6 @@ ALU instance_ALU(
     .LEDS(LEDS), 
     .Data_A (Data_A), 
     .Data_B (Data_B), 
-    .Op(Op),
-    .clock(clock)
+    .Op(Op)
 );
 endmodule

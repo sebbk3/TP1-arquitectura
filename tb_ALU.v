@@ -23,14 +23,12 @@ module tb_ALU;
   reg [5 : 0] A;
   reg [5 : 0] B;
   reg [5 : 0] OP;
-  reg clock;
   wire [5 : 0] LEDS;
 
   
   initial begin
     $dumpfile("dump.vcd"); $dumpvars;
     
-    clock = 0;
     A = 0;
     B = 0;
     OP = 0;
@@ -89,15 +87,12 @@ module tb_ALU;
     OP = 0;
 
   end
-  
-  always #5 clock = ~clock;
    
   ALU instance_ALU(
         .LEDS(LEDS), 
         .Data_A(A), 
         .Data_B(B), 
-        .Op(OP),
-        .clock(clock)
+        .Op(OP)
   );
   
    endmodule

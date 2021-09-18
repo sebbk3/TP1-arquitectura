@@ -28,10 +28,8 @@ module tb_auto_random;
   wire [5 : 0] LEDS;
   reg [5 : 0] r_op[7 : 0];
   
-  //reg ready;
   reg [5 : 0] a_aux;
   reg [5 : 0] b_aux;
- // reg [7 : 0] op_aux;
   reg [5 : 0] res_aux;
   
   initial begin
@@ -41,10 +39,8 @@ module tb_auto_random;
     clock = 0;
     switches = 0;
     buttons = 0;
- //   ready = 0;
     a_aux = 0;
     b_aux = 0;
- //   op_aux = 0;
     res_aux = 0;
            
     r_op [0] = 6'b100000;  //ADD
@@ -290,42 +286,8 @@ module tb_auto_random;
     else begin
         $display("############# NOR CORRECTA  ############\n");    
         end
-        
-        
-  //   #1 ready = 1;       
+      
   end
-/*  
-  always @(posedge clock) begin 
-    if(ready) begin
-    #1;
-    case(op_aux) 
-        6'b100000: //ADD
-            res_aux <= (a_aux + b_aux);
-        6'b100010: //SUB
-            res_aux <= (a_aux - b_aux);
-        6'b100100: //AND
-            res_aux <= (a_aux & b_aux);
-        6'b100101: //OR
-            res_aux <= (a_aux | b_aux); 
-        6'b100110: //XOR
-            res_aux <= (a_aux ^ b_aux);
-        6'b000011: //SRA - mueve derecha y rellena con signo
-            res_aux <= (a_aux >>> b_aux);
-        6'b000010: //SRL - mueve derecha y rellena con ceros
-            res_aux <= (a_aux >> b_aux);
-        6'b100111: //NOR
-            res_aux <= ~(a_aux | b_aux);
-        endcase
-    if( res_aux != LEDS ) begin
-        $error("Error en la operacion!");
-        $display("#############   Test FALLO   ############");
-        $finish();
-        end
-    else
-        $display("############# operacion CORRECTA  ############");    
-        end
-  end
-  */
   
   always #1 clock = ~clock;
    
